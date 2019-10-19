@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>MySQL数据库增删改查SQL语句 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="1.创建数据库1create database 数据库名;  2.查看数据库1show databases;  3.使用数据库1use 数据库名;  4.删除数据库1drop database 数据库名;  5.创建表1create table 表名 ( 列名1 类型(长度) [约束],    列名2 类型(长度) [约束], ......);  6.查看表结构1desc 表名;  7.删除表1d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL数据库增删改查SQL语句">
+<meta property="og:url" content="http://yoursite.com/2019/10/18/MySQL数据库增删改查SQL语句/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.创建数据库1create database 数据库名;  2.查看数据库1show databases;  3.使用数据库1use 数据库名;  4.删除数据库1drop database 数据库名;  5.创建表1create table 表名 ( 列名1 类型(长度) [约束],    列名2 类型(长度) [约束], ......);  6.查看表结构1desc 表名;  7.删除表1d">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-19T05:51:55.902Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MySQL数据库增删改查SQL语句">
+<meta name="twitter:description" content="1.创建数据库1create database 数据库名;  2.查看数据库1show databases;  3.使用数据库1use 数据库名;  4.删除数据库1drop database 数据库名;  5.创建表1create table 表名 ( 列名1 类型(长度) [约束],    列名2 类型(长度) [约束], ......);  6.查看表结构1desc 表名;  7.删除表1d">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-MySQL数据库增删改查SQL语句" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL数据库增删改查SQL语句
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/10/18/MySQL数据库增删改查SQL语句/" class="article-date">
+  <time datetime="2019-10-18T12:59:42.000Z" itemprop="datePublished">2019-10-18</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1.创建数据库"></a>1.创建数据库</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database 数据库名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-查看数据库"><a href="#2-查看数据库" class="headerlink" title="2.查看数据库"></a>2.查看数据库</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-使用数据库"><a href="#3-使用数据库" class="headerlink" title="3.使用数据库"></a>3.使用数据库</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use 数据库名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-删除数据库"><a href="#4-删除数据库" class="headerlink" title="4.删除数据库"></a>4.删除数据库</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database 数据库名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="5-创建表"><a href="#5-创建表" class="headerlink" title="5.创建表"></a>5.创建表</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table 表名 ( 列名1 类型(长度) [约束],    列名2 类型(长度) [约束], ......);</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6-查看表结构"><a href="#6-查看表结构" class="headerlink" title="6.查看表结构"></a>6.查看表结构</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc 表名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="7-删除表"><a href="#7-删除表" class="headerlink" title="7.删除表"></a>7.删除表</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table 表名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="8-数据约束"><a href="#8-数据约束" class="headerlink" title="8.数据约束"></a>8.数据约束</h3><ul>
+<li><p>主键约束：  特性：非空且唯一</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">列名 数据类型 primary key</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>字段自增：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">列名 数据类型 auto_increment primary key;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>外键约束：从表的外键，必须在主表的主键出现</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">foreign key (字段名)  references 主表名(字段名);</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>非空约束：指字段的值不能为空</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名 数据类型 not null ;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>默认约束：指定某列的默认值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名 数据类型 default 默认值;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>唯一约束：要求该列的值唯一，允许为空，但是只能出现一个空值</p>
+</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">字段名 数据类型 unique;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="9-修改表"><a href="#9-修改表" class="headerlink" title="9.修改表"></a>9.修改表</h3><ul>
+<li><p>修改列名：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 change 列名 新列名 类型;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>修改列类型：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 change 列名 列名 新类型;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>修改列类型：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 modify 列名 新类型;</span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ul>
+<h2 id="二-插入数据"><a href="#二-插入数据" class="headerlink" title="二. 插入数据"></a>二. 插入数据</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段1,字段2...)values(值1,值2...);</span><br></pre></td></tr></table></figure></div>
+
+<p>注意： 1.如果插入的表中的主键是自增类型的，可以不用插入值    </p>
+<p>​             2.如果主键是非自增 ，插入的数据则是填补主键字段值空余的值             </p>
+<p>​             3.如果主键设置了自动递增，会从主键字段最大值开始插入数据</p>
+<h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段1,字段2)values(值1,值2),(值1,值2);</span><br></pre></td></tr></table></figure></div>
+
+<p>//插入多条数据【MYSQL】insert into 表名 values(值1,值2); </p>
+<p>//针对全表所有字段进行插入操作insert into 表名(字段) select 字段 from 表2;<br>//查询结果插入insert into 表名 select 字段 from 表2;</p>
+<p>//查询结果，全表插入</p>
+<h2 id="三-修改数据"><a href="#三-修改数据" class="headerlink" title="三. 修改数据"></a>三. 修改数据</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表 set 字段=值 where 条件;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="四-删除数据"><a href="#四-删除数据" class="headerlink" title="四. 删除数据"></a>四. 删除数据</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表 where 条件;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="五-数据查询"><a href="#五-数据查询" class="headerlink" title="五. 数据查询"></a>五. 数据查询</h2><h3 id="1-查询表中全部信息"><a href="#1-查询表中全部信息" class="headerlink" title="1.查询表中全部信息"></a>1.查询表中全部信息</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from 表名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="2-查询表中指定列的信息"><a href="#2-查询表中指定列的信息" class="headerlink" title="2.查询表中指定列的信息"></a>2.查询表中指定列的信息</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 列1,列2 from 表名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="3-数据去重"><a href="#3-数据去重" class="headerlink" title="3.数据去重"></a>3.数据去重</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct 列…. From 表名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="4-拼接结果"><a href="#4-拼接结果" class="headerlink" title="4.拼接结果"></a>4.拼接结果</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select concat(列1,列2) from 表名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="5-设置别名"><a href="#5-设置别名" class="headerlink" title="5.设置别名"></a>5.设置别名</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select 列 as 别名 from 表名;   </span><br><span class="line">select 列 别名 from 表名;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="6-条件查询"><a href="#6-条件查询" class="headerlink" title="6.条件查询"></a>6.条件查询</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 列… from 表名 where 条件;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><p>条件中比较运算符：( 等于:= 大于:&gt; 大于等于:&gt;= 小于:&lt; 小于等于:&lt;= 不等于:!= 或 &lt;&gt; ) </p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where 列  比较运算符  值;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>逻辑运算符( 并且:and 或 &amp;&amp; 或:or 非:not 或 ! )</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">where 条件1  逻辑运算符  条件2;   </span><br><span class="line">where not 条件;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>范围查询</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where 列 between 条件1  and 条件2;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>集合查询( 判断列的值是否在指定的集合中 )</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where 列 in(值1,值2);</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>NULL值查询( 注意：列中值为null不能使用=去查询 )</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where 列 is null;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>模糊查询</p>
+<p>%：表示0到多个字符</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where 列 like &apos;%0&apos;;</span><br></pre></td></tr></table></figure></div>
+
+<p>_：表示一个字符，可多次使用</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where 列 like &apos;%0_&apos;;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>结果排序( 对查询出的结果按照一列或多列进行升序还是降序排列 升序:asc 降序:desc 注意：不能使用 中文的别名排序)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where 条件 order by 列 [asc/desc];</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>分页查询( beginIndex:表示从第多少条数据开始 pageSize:表示每页显示的数据条数 </p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where [条件] limit beginIndex,pageSize;</span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ul>
+<h3 id="7-聚集函数-作用于一组数据，并对一组数据返回一个值"><a href="#7-聚集函数-作用于一组数据，并对一组数据返回一个值" class="headerlink" title="7.聚集函数( 作用于一组数据，并对一组数据返回一个值"></a>7.聚集函数( 作用于一组数据，并对一组数据返回一个值</h3><ul>
+<li>COUNT:统计结果记录数，若统计的是列，列中为Null，那么count将不会计算值 </li>
+<li>MAX: 统计计算最大值 </li>
+<li>MIN: 统计计算最小值 </li>
+<li>SUM: 统计计算求和 </li>
+<li>AVG: 统计计算平均值</li>
+</ul>
+<h3 id="8-分组函数"><a href="#8-分组函数" class="headerlink" title="8.分组函数"></a>8.分组函数</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 聚集函数 from 表名 where [条件] group by 列 having 分组后的条件;</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/10/12/javaoop知识点总结/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">javaoop知识点总结</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        文杰
+      
+    </h3>
+    <p class="avatar-slogan">
+      特别耐撕的小前端，资深的打酱油攻城狮。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/18/MySQL数据库增删改查SQL语句/">MySQL数据库增删改查SQL语句</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/12/javaoop知识点总结/">javaoop知识点总结</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 John Doe &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
