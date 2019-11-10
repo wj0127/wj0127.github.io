@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Java中的异常处理 | Hexo
+      DOM的总结 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《Java中的异常处理》
+			当前文章&nbsp;:&nbsp;《DOM的总结》
 		
 	</p>
 
@@ -258,6 +258,18 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
 	 
 
 <div class="layout-post">
@@ -265,8 +277,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/11/10/Java中的异常处理/" itemprop="url">
-		Java中的异常处理
+	<a href="/2019/11/10/DOM的总结/" itemprop="url">
+		DOM的总结
 	</a>
 
 	</div>
@@ -279,8 +291,8 @@
 
 	发布于
 
-	<a href="/2019/11/10/Java中的异常处理/" itemprop="url">
-		<time datetime="2019-11-10T04:25:48.000Z" itemprop="datePublished">
+	<a href="/2019/11/10/DOM的总结/" itemprop="url">
+		<time datetime="2019-11-10T04:43:19.000Z" itemprop="datePublished">
 	  		2019-11-10
 	  </time>
 	</a>
@@ -297,8 +309,8 @@
 
 	更新于
 
-	<a href="/2019/11/10/Java中的异常处理/" itemprop="url">
-		<time datetime="2019-11-10T04:25:48.000Z" itemprop="dateUpdated">
+	<a href="/2019/11/10/DOM的总结/" itemprop="url">
+		<time datetime="2019-11-10T04:43:19.000Z" itemprop="dateUpdated">
 	  		2019-11-10
 	  </time>
 	</a> 
@@ -318,29 +330,61 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p><strong>Java中的异常处理</strong></p>
-<img alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/20191108174016274.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpYW5naGVjYWk1MjE3MTMxNA==,size_16,color_FFFFFF,t_70">
+		<h3 id="节点的介绍"><a href="#节点的介绍" class="headerlink" title="节点的介绍"></a>节点的介绍</h3><h5 id="节点的分类"><a href="#节点的分类" class="headerlink" title="节点的分类"></a>节点的分类</h5><table>
+<thead>
+<tr>
+<th align="center">节点</th>
+<th align="center">节点类型(node Type)</th>
+<th align="center">节点名字(node Name)</th>
+<th align="center">节点值(node Value)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">元素节点</td>
+<td align="center">1</td>
+<td align="center">大写标签名</td>
+<td align="center">null</td>
+</tr>
+<tr>
+<td align="center">属性节点</td>
+<td align="center">2</td>
+<td align="center">属性名</td>
+<td align="center">属性值</td>
+</tr>
+<tr>
+<td align="center">文本节点</td>
+<td align="center">3</td>
+<td align="center">#text</td>
+<td align="center">文本</td>
+</tr>
+<tr>
+<td align="center">注释节点</td>
+<td align="center">8</td>
+<td align="center">#comment</td>
+<td align="center">注释的文字</td>
+</tr>
+<tr>
+<td align="center">文档节点</td>
+<td align="center">9</td>
+<td align="center">#document</td>
+<td align="center">null</td>
+</tr>
+</tbody></table>
+<p><strong>获取节点：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">childNodes：获取所有子节点</span><br><span class="line">children：获取所有元素子节点</span><br><span class="line">parentNode：获取父元素节点</span><br><span class="line">firstChild：获取第一个子节点</span><br><span class="line">firstElementChild：获取第一个元素节点</span><br><span class="line">lastChild：获取最后一个子节点</span><br><span class="line">lastElementChild：获取最后一个元素节点</span><br><span class="line">previousSibling：获取上一个兄弟节点</span><br><span class="line">prveiousElementSibling：获取上一个兄弟元素节点</span><br><span class="line">nextSibling：获取下一个兄弟节点</span><br><span class="line">nextElementSibling：获取下一个兄弟元素节点</span><br><span class="line">attributes：获取属性节点</span><br><span class="line">ownerDocument：获取根节点</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例1：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        System.out.println(<span class="number">3</span>/<span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"finally"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>DOM元素的增删改查：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">增：</span><br><span class="line">	document.createElement()：创建元素节点</span><br><span class="line">	document.createTextNode()：创建文本节点</span><br><span class="line">	appendChild：将创建好的节点，插入到某个标签内的最后</span><br><span class="line">	insertBefore(newNode,existNode)：将一个节点插入在一个元素前面</span><br><span class="line">删：</span><br><span class="line">	remove：删除元素</span><br><span class="line">	removeChild：删除子元素</span><br><span class="line">改：</span><br><span class="line">	outerHTML：修改元素（很少用）</span><br><span class="line">查：</span><br><span class="line">	元素选择器：</span><br><span class="line">		document选择器</span><br><span class="line">		document.getElementById()：id选择器。参数是id名字，返回对应的元素</span><br><span class="line">		document.getElementsByClassName()：class选择器。参数是class的名字，返回一个类数组对象</span><br><span class="line">		document.getElementsByTagName()：标签选择器，参数是标签名字，返回一个类数组对象</span><br><span class="line">		document.getElementsByName()：表单选择器，参数是表单name的属性值，返回一个类数组对象</span><br><span class="line">		ES5新增的选择器（万能但有兼容）：</span><br><span class="line">		document.querySelector()：根据css选择器，返回一个元素</span><br><span class="line">		document.querySelectorAll()：根据css选择器，返回一个元素的集合</span><br><span class="line">		注：以上除了document.getElementById()和document.getElementsByTagName()其余都有兼容性，IE6不支持</span><br><span class="line">	节点选择器：</span><br><span class="line">		oDiv.children：返回一个元素下面所有元素节点组成的数组</span><br><span class="line">		oSpan.parentNode：返回一个元素的父节点</span><br></pre></td></tr></table></figure>
 
-<p><strong>结果：</strong></p>
-<img alt="在这里插入图片描述" src="https://img-blog.csdnimg.cn/20191108173728185.png">
+<p><strong>DOM属性的增删改查：（对象的操作方法和attribute）</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">内置属性：</span><br><span class="line">	可见：1.使用对象的操作方法，.语法、[]语法</span><br><span class="line">		  2.attribute系列</span><br><span class="line">			getAttribute：通过属性名获取属性</span><br><span class="line">			setAttribute：设置属性。第一个参数属性名，第二个参数是属性值</span><br><span class="line">			removeAttribute：通过属性名删除属性</span><br><span class="line">	不可见：如innerHTML、innerText、childNodes、tagName等等</span><br><span class="line">		使用对象的方法操作</span><br><span class="line">非内置属性：</span><br><span class="line">	可见：attribute系列</span><br><span class="line">			getAttribute：通过属性名获取属性值</span><br><span class="line">			setAttribute：设置属性。第一个参数属性名，第二个参数是属性值</span><br><span class="line">			removeAttribute：通过属性名删除属性</span><br><span class="line">	不可见：放飞自我的设置</span><br><span class="line">		使用对象的方法操作</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例：Multi-catch</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> d = <span class="keyword">new</span> Scanner(System.in).nextInt();</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        System.out.println(<span class="number">3</span> / d);</span><br><span class="line">        <span class="keyword">new</span> File(<span class="string">"G:/dd/aa/ab.txt"</span>).createNewFile();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ArithmeticException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        <span class="comment">// System.out.println(e.getMessage());</span></span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//可以简写为</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        System.out.println(<span class="number">3</span> / d);</span><br><span class="line">        <span class="keyword">new</span> File(<span class="string">"G:/dd/aa/ab.txt"</span>).createNewFile();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (ArithmeticException | IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>DOM样式的增删改查：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">内联式：1.style：元素名.style.元素名，既可以获取也可以设置</span><br><span class="line">				元素.style.cssText可以设置所有属性</span><br><span class="line">非内联式：内联和非内联都可以获取，但不可以设置</span><br><span class="line">	高级浏览器：getComputedStyle(元素名，false).属性</span><br><span class="line">	IE浏览器：元素.currentStyle.属性</span><br></pre></td></tr></table></figure>
 
-<p><strong>示例：</strong></p>
-<p><em>实现一：抛出异常</em></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">       File file = <span class="keyword">new</span> File(<span class="string">"pom.xml"</span>);</span><br><span class="line">       FileReader reader = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">       <span class="keyword">char</span>[] buf = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">128</span>];</span><br><span class="line">       <span class="keyword">int</span> len = -<span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span>((len = reader.read(buf))!= -<span class="number">1</span>)&#123;</span><br><span class="line">           String res = <span class="keyword">new</span> String(buf, <span class="number">0</span>, len);</span><br><span class="line">           System.out.println(res);</span><br><span class="line">       &#125;</span><br><span class="line">       reader.close();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>尺寸的获取：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">offsetWidth/offsetHeight：对象（元素）的content+padding+border。包括滚动条等边线，会随窗口的显示大小改变</span><br><span class="line">clientWidth/clientHeight：对象（元素）的content+padding。不包括滚动条等边线，会随窗口的显示大小改变 </span><br><span class="line">scrollWidth/scrollHeight：总尺寸，包含溢出的尺寸，content+padding+scroll。不包括边线宽度，会随着对象中内容的多少改变</span><br><span class="line">offsetLeft/offsetTop：相对于包含块偏移的距离</span><br><span class="line">scrollLeft/scrollTop：元素滚动条滚动了的距离，可设置</span><br></pre></td></tr></table></figure>
 
-<p><em>实现二：捕获异常</em></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">"pom.xml"</span>);</span><br><span class="line">    FileReader reader = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        reader = <span class="keyword">new</span> FileReader(file);</span><br><span class="line">        <span class="keyword">char</span>[] buf = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">128</span>];</span><br><span class="line">        <span class="keyword">int</span> len = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((len = reader.read(buf)) != -<span class="number">1</span>) &#123;</span><br><span class="line">            String res = <span class="keyword">new</span> String(buf, <span class="number">0</span>, len);</span><br><span class="line">            System.out.println(res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (reader != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                reader.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em>实现二：try-with-resources  系统会自动释放资源</em></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(<span class="string">"pom.xml"</span>);</span><br><span class="line">    <span class="keyword">try</span> (FileReader reader = <span class="keyword">new</span> FileReader(file);) &#123;</span><br><span class="line">        <span class="keyword">char</span>[] buf = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">128</span>];</span><br><span class="line">        <span class="keyword">int</span> len = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((len = reader.read(buf)) != -<span class="number">1</span>) &#123;</span><br><span class="line">            String res = <span class="keyword">new</span> String(buf, <span class="number">0</span>, len);</span><br><span class="line">            System.out.println(res);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
 	
 	</div>
 	
@@ -359,12 +403,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/11/10/DOM的总结/" title="DOM的总结" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/11/03/Java集合/" title="Java集合" rel="next">
+			<a href="/2019/11/10/Java中的异常处理/" title="Java中的异常处理" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -385,47 +425,26 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/11/10/DOM的总结/" title="DOM的总结">
-								DOM的总结			
+							<a class="relate-post-title" href="/2019/11/10/Java中的异常处理/" title="Java中的异常处理">
+								Java中的异常处理			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
 								十一月 10日, 2019				
 							</p>
 							<p class="relate-post-content">
-								节点的介绍节点的分类
+								Java中的异常处理
 
 
-节点
-节点类型(node Type)
-节点名字(node Name)
-节点值(node Value)
-
-
-
-元素节点
-1
-大写标签名
-null
-
-
-属性节点
-2
-属性名
-属性值
-
-
-文本节点
-3
-#text
-...
+示例1：
+123456789public static void main(String[] args) &#123;    try &#123;        System.out.println(3/0)...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2019/11/10/DOM的总结/" title="DOM的总结">				
+							<a href="/2019/11/10/Java中的异常处理/" title="Java中的异常处理">				
 								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover1.jpg" alt="DOM的总结"/>
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover1.jpg" alt="Java中的异常处理"/>
 							</a>
 						</div>
 					</li>											
