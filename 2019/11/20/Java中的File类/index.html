@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      发布博客步骤 | Hexo
+      Java中的File类 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《发布博客步骤》
+			当前文章&nbsp;:&nbsp;《Java中的File类》
 		
 	</p>
 
@@ -258,18 +258,6 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-	
-		<div class="layout-toc">
-			<div id="layout-toc">
-				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-			</div>
-		</div>
-
-		
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
 	 
 
 <div class="layout-post">
@@ -277,8 +265,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/10/26/发布博客步骤/" itemprop="url">
-		发布博客步骤
+	<a href="/2019/11/20/Java中的File类/" itemprop="url">
+		Java中的File类
 	</a>
 
 	</div>
@@ -291,9 +279,9 @@
 
 	发布于
 
-	<a href="/2019/10/26/发布博客步骤/" itemprop="url">
-		<time datetime="2019-10-26T12:07:55.000Z" itemprop="datePublished">
-	  		2019-10-26
+	<a href="/2019/11/20/Java中的File类/" itemprop="url">
+		<time datetime="2019-11-20T12:53:42.000Z" itemprop="datePublished">
+	  		2019-11-20
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +297,9 @@
 
 	更新于
 
-	<a href="/2019/10/26/发布博客步骤/" itemprop="url">
-		<time datetime="2019-10-26T12:07:55.000Z" itemprop="dateUpdated">
-	  		2019-10-26
+	<a href="/2019/11/20/Java中的File类/" itemprop="url">
+		<time datetime="2019-11-20T12:53:42.000Z" itemprop="dateUpdated">
+	  		2019-11-20
 	  </time>
 	</a> 
 
@@ -330,16 +318,16 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h3 id="1、创建博客标题"><a href="#1、创建博客标题" class="headerlink" title="1、创建博客标题"></a>1、创建博客标题</h3><h3 id="一、创建博客标题"><a href="#一、创建博客标题" class="headerlink" title="一、创建博客标题"></a>一、创建博客标题</h3><p>$ hexo new “发布博客步骤”</p>
-<h3 id="二、编写博客内容"><a href="#二、编写博客内容" class="headerlink" title="二、编写博客内容"></a>二、编写博客内容</h3><p>找到创建的md文件，使用编辑器打开，按照Markdown的格式，编写博客内容，编写完成之后，执行以下代码，将博客内容推送到远程服务器上。</p>
-<ol>
-<li>hexo generate   //生成静态文件</li>
-<li>cp -R public/* .deploy/wj0127.github.io  //复制文件</li>
-<li>cd .deploy/wj0127.github.io //切换目录</li>
-<li>git add .  //将需要提交的代码添加到暂存区</li>
-<li>git commit -m “update” //将暂存区内容提交给本地版本库</li>
-<li>git push //推送给远程服务器</li>
-</ol>
+		<p><strong>1.File类</strong></p>
+<p><strong><em>IO 流可以实现 Java 程序对文件的读写操作，首先需要掌握的是 Java 如何来操作文件，通过 java.io.File 类来创建文件对象，从而完成相关操作。</em></strong></p>
+<p>File类的常用方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">File</span><span class="params">(String pathname)</span>				<span class="comment">//根据路径创建文件对象</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span>						<span class="comment">//获取文件名</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getParent</span><span class="params">()</span>					<span class="comment">//获取文件所在的目录</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> File <span class="title">getParentFile</span><span class="params">()</span>					<span class="comment">//获取文件所在目录对应的 File 对象</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getPath</span><span class="params">()</span>						<span class="comment">//获取文件路径</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">exists</span><span class="params">()</span>						<span class="comment">//判断文件是否存在，true 表示存在，false 表示不存在</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isDirectory</span><span class="params">()</span>				<span class="comment">//判断对象是否为目录</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isFile</span><span class="params">()</span>						<span class="comment">//判断对象是否为文件</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">length</span><span class="params">()</span>						<span class="comment">//获取文件大小</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">createNewFile</span><span class="params">()</span>				<span class="comment">//根据当前对象创建新文件</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">delete</span><span class="params">()</span>						<span class="comment">//删除当前对象</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">mkdir</span><span class="params">()</span>						<span class="comment">//根据当前对象创建新目录</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">renameTo</span><span class="params">(File dest)</span>			<span class="comment">//给文件重命名。如果目标文件与源文件不在同一目录下，会按照目标文件的路径重新设置该文件路径，相当于对文件进行了移动。</span></span></span><br></pre></td></tr></table></figure>
+
+<p><strong>1.1以下是参考的代码：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> day26;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileFilter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">* <span class="doctag">@author</span> Administrator </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*File 演示</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileDemo01</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">  	<span class="comment">// 创建一个File对象。</span></span><br><span class="line">  	File file = <span class="keyword">new</span> File(<span class="string">"C://Users//Administrator//Desktop//test//a.txt"</span>);<span class="comment">//    </span></span><br><span class="line">  	file.createNewFile();<span class="comment">// 创建文件。</span></span><br><span class="line">  	<span class="comment">// 创建目录</span></span><br><span class="line">  	File dir = <span class="keyword">new</span> File(<span class="string">"C://Users//Administrator//Desktop//test//aa"</span>);<span class="comment">// </span></span><br><span class="line">  	dir.mkdir();</span><br><span class="line">  	</span><br><span class="line">  <span class="comment">// 判断文件是否存在。</span></span><br><span class="line">  System.out.println(file.exists());</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 获取文件名。</span></span><br><span class="line">  System.out.println(file.getName());</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 获取文件的路径。</span></span><br><span class="line">  System.out.println(file.getAbsolutePath());</span><br><span class="line">  </span><br><span class="line">  File file1 = <span class="keyword">new</span> File(<span class="string">"FileDemo01.java"</span>);</span><br><span class="line">  System.out.println(file1.getAbsolutePath());</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 是否是一个目录</span></span><br><span class="line">  System.out.println(dir.isDirectory());</span><br><span class="line">  <span class="comment">// 是否是一个文件。</span></span><br><span class="line">  System.out.println(file1.isFile());</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 是否是一个隐藏文件。</span></span><br><span class="line">  System.out.println(file.isHidden());</span><br><span class="line">  <span class="comment">// 删除某个文件</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">//		System.out.println(file.delete());</span></span><br><span class="line">  	<span class="comment">// 文件最后的修改时间</span></span><br><span class="line">  	<span class="keyword">long</span> time = file.lastModified();</span><br><span class="line">  	System.out.println(time);</span><br><span class="line">  <span class="comment">// 将long类型时间转换成日期格式。</span></span><br><span class="line">  String date = formatDate(time, <span class="string">"yyyy-MM-dd"</span>);</span><br><span class="line">  System.out.println(date);</span><br><span class="line">  <span class="comment">// 文件是否可读</span></span><br><span class="line">  System.out.println(file.canRead());</span><br><span class="line">  <span class="comment">// 文件是否可写</span></span><br><span class="line">  System.out.println(file.canWrite());</span><br><span class="line">  System.out.println(<span class="string">"==============================================="</span>);</span><br><span class="line">  <span class="comment">// 获得当前目录下，所有的文件。</span></span><br><span class="line">  File[] files = dir.listFiles();</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;files.length;i++)&#123;</span><br><span class="line">  	System.out.println(files[i].getName());</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 获得文件长度</span></span><br><span class="line">  <span class="keyword">long</span> length = file.length();</span><br><span class="line">  System.out.println(<span class="string">"文件长度："</span>+length);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 获得父及目录</span></span><br><span class="line">  String parent = file.getParent();</span><br><span class="line">  System.out.println(parent);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 日期转换</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">formatDate</span><span class="params">(<span class="keyword">long</span> date,String type)</span></span>&#123;</span><br><span class="line">  	SimpleDateFormat format = <span class="keyword">new</span> SimpleDateFormat(type);</span><br><span class="line">  	String str = format.format(<span class="keyword">new</span> Date(date));</span><br><span class="line">  	<span class="keyword">return</span> str;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> day26;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.net.URI;</span><br><span class="line"><span class="keyword">import</span> java.net.URISyntaxException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*File  练习</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*<span class="doctag">@author</span> Administrator</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*指明当前项目路径，根据路径创建File对象。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*在当前项目中，判断是否包含test目录。如果不包含创建一个test目录。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*在test目录中，判断是否包含Hello.java文件。如果不包含文件。就创建一个文件。</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileDemo02</span> </span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">	File dir = <span class="keyword">new</span> File(<span class="string">"D://北科大//day26//test"</span>);</span><br><span class="line">	<span class="comment">// 是否存在该目录。</span></span><br><span class="line">	<span class="keyword">if</span>(dir.exists())&#123;</span><br><span class="line">		<span class="comment">// 判断是否存在Hello.java的文件。</span></span><br><span class="line">		File file = <span class="keyword">new</span> File(<span class="string">"D://北科大//day26//test//Hello.java"</span>);</span><br><span class="line">		<span class="keyword">if</span>(file.exists())&#123;</span><br><span class="line">			<span class="comment">// 获取文件信息。</span></span><br><span class="line">			System.out.println(file.getName());</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			file.createNewFile();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		dir.mkdir();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 	
 	</div>
 	
@@ -358,12 +346,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/10/27/《心有多静，福有多深》/" title="《心有多静，福有多深》" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/10/18/MySQL数据库增删改查SQL语句/" title="MySQL数据库增删改查SQL语句" rel="next">
+			<a href="/2019/11/20/动态代理-JDK/" title="动态代理-JDK" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -381,32 +365,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/11/20/Java中的File类/" title="Java中的File类">
-								Java中的File类			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 20日, 2019				
-							</p>
-							<p class="relate-post-content">
-								1.File类
-IO 流可以实现 Java 程序对文件的读写操作，首先需要掌握的是 Java 如何来操作文件，通过 java.io.File 类来创建文件对象，从而完成相关操作。
-File类的常用方法
-1234567891011121...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/11/20/Java中的File类/" title="Java中的File类">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover1.jpg" alt="Java中的File类"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -575,6 +533,32 @@ Java 语言中提供的数组是用来存储固定大小的同类型元素。
 							<a href="/2019/10/27/《心有多静，福有多深》/" title="《心有多静，福有多深》">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover1.jpg" alt="《心有多静，福有多深》"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/10/26/发布博客步骤/" title="发布博客步骤">
+								发布博客步骤			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十月 26日, 2019				
+							</p>
+							<p class="relate-post-content">
+								1、创建博客标题一、创建博客标题$ hexo new “发布博客步骤”
+二、编写博客内容找到创建的md文件，使用编辑器打开，按照Markdown的格式，编写博客内容，编写完成之后，执行以下代码，将博客内容推送到远程服务器上。
+
+hex...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/10/26/发布博客步骤/" title="发布博客步骤">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover1.jpg" alt="发布博客步骤"/>
 							</a>
 						</div>
 					</li>											
