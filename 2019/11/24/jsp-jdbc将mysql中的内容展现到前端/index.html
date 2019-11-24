@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      DOM的总结 | Hexo
+      jsp+jdbc将mysql中的内容展现到前端 | Hexo
     
   </title>
   <meta name="author" content="John Doe">
@@ -160,7 +160,7 @@
 	<!-- Page title -->
 	<p>
 		
-			当前文章&nbsp;:&nbsp;《DOM的总结》
+			当前文章&nbsp;:&nbsp;《jsp+jdbc将mysql中的内容展现到前端》
 		
 	</p>
 
@@ -258,18 +258,6 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-	
-		<div class="layout-toc">
-			<div id="layout-toc">
-				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-			</div>
-		</div>
-
-		
-		<script src="/plugin/toc/katelog.min.js"></script>
-
-		
 	 
 
 <div class="layout-post">
@@ -277,8 +265,8 @@
 	<div class="article-title">
 		<i class="fa fa-paper-plane-o" aria-hidden="true"></i>
 		
-	<a href="/2019/11/10/DOM的总结/" itemprop="url">
-		DOM的总结
+	<a href="/2019/11/24/jsp-jdbc将mysql中的内容展现到前端/" itemprop="url">
+		jsp+jdbc将mysql中的内容展现到前端
 	</a>
 
 	</div>
@@ -291,9 +279,9 @@
 
 	发布于
 
-	<a href="/2019/11/10/DOM的总结/" itemprop="url">
-		<time datetime="2019-11-10T04:43:19.000Z" itemprop="datePublished">
-	  		2019-11-10
+	<a href="/2019/11/24/jsp-jdbc将mysql中的内容展现到前端/" itemprop="url">
+		<time datetime="2019-11-24T09:28:03.000Z" itemprop="datePublished">
+	  		2019-11-24
 	  </time>
 	</a>
 	&nbsp;
@@ -309,9 +297,9 @@
 
 	更新于
 
-	<a href="/2019/11/10/DOM的总结/" itemprop="url">
-		<time datetime="2019-11-10T04:43:19.000Z" itemprop="dateUpdated">
-	  		2019-11-10
+	<a href="/2019/11/24/jsp-jdbc将mysql中的内容展现到前端/" itemprop="url">
+		<time datetime="2019-11-24T09:28:03.000Z" itemprop="dateUpdated">
+	  		2019-11-24
 	  </time>
 	</a> 
 
@@ -330,60 +318,16 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<h3 id="节点的介绍"><a href="#节点的介绍" class="headerlink" title="节点的介绍"></a>节点的介绍</h3><h5 id="节点的分类"><a href="#节点的分类" class="headerlink" title="节点的分类"></a>节点的分类</h5><table>
-<thead>
-<tr>
-<th align="center">节点</th>
-<th align="center">节点类型(node Type)</th>
-<th align="center">节点名字(node Name)</th>
-<th align="center">节点值(node Value)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">元素节点</td>
-<td align="center">1</td>
-<td align="center">大写标签名</td>
-<td align="center">null</td>
-</tr>
-<tr>
-<td align="center">属性节点</td>
-<td align="center">2</td>
-<td align="center">属性名</td>
-<td align="center">属性值</td>
-</tr>
-<tr>
-<td align="center">文本节点</td>
-<td align="center">3</td>
-<td align="center">#text</td>
-<td align="center">文本</td>
-</tr>
-<tr>
-<td align="center">注释节点</td>
-<td align="center">8</td>
-<td align="center">#comment</td>
-<td align="center">注释的文字</td>
-</tr>
-<tr>
-<td align="center">文档节点</td>
-<td align="center">9</td>
-<td align="center">#document</td>
-<td align="center">null</td>
-</tr>
-</tbody></table>
-<p><strong>获取节点：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">childNodes：获取所有子节点</span><br><span class="line">children：获取所有元素子节点</span><br><span class="line">parentNode：获取父元素节点</span><br><span class="line">firstChild：获取第一个子节点</span><br><span class="line">firstElementChild：获取第一个元素节点</span><br><span class="line">lastChild：获取最后一个子节点</span><br><span class="line">lastElementChild：获取最后一个元素节点</span><br><span class="line">previousSibling：获取上一个兄弟节点</span><br><span class="line">prveiousElementSibling：获取上一个兄弟元素节点</span><br><span class="line">nextSibling：获取下一个兄弟节点</span><br><span class="line">nextElementSibling：获取下一个兄弟元素节点</span><br><span class="line">attributes：获取属性节点</span><br><span class="line">ownerDocument：获取根节点</span><br></pre></td></tr></table></figure>
+		<p>在mysql中见一个book数据库，见一张bookinfo的表，插入如下数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select * from bookinfo;</span><br><span class="line">+------+------------------------+--------------------+-------+</span><br><span class="line">| id   | bookname               | author             | price |</span><br><span class="line">+------+------------------------+--------------------+-------+</span><br><span class="line">|   1  | Web开发技术教程        | 张娜、陈宁等         |    35   |</span><br><span class="line">|   2  | Web基础教程            | 姜仲等             |    29   |</span><br><span class="line">|   3  | 数据库应用原理         | 张冬青              |    28   |</span><br><span class="line">|   4  | Java核心技术技术       | Gray Cornell       |    50   |</span><br><span class="line">|   5  | JSP2.0应用教程         | 陈旭东             |    29   |</span><br><span class="line">+------+------------------------+--------------------+-------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>DOM元素的增删改查：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">增：</span><br><span class="line">	document.createElement()：创建元素节点</span><br><span class="line">	document.createTextNode()：创建文本节点</span><br><span class="line">	appendChild：将创建好的节点，插入到某个标签内的最后</span><br><span class="line">	insertBefore(newNode,existNode)：将一个节点插入在一个元素前面</span><br><span class="line">删：</span><br><span class="line">	remove：删除元素</span><br><span class="line">	removeChild：删除子元素</span><br><span class="line">改：</span><br><span class="line">	outerHTML：修改元素（很少用）</span><br><span class="line">查：</span><br><span class="line">	元素选择器：</span><br><span class="line">		document选择器</span><br><span class="line">		document.getElementById()：id选择器。参数是id名字，返回对应的元素</span><br><span class="line">		document.getElementsByClassName()：class选择器。参数是class的名字，返回一个类数组对象</span><br><span class="line">		document.getElementsByTagName()：标签选择器，参数是标签名字，返回一个类数组对象</span><br><span class="line">		document.getElementsByName()：表单选择器，参数是表单name的属性值，返回一个类数组对象</span><br><span class="line">		ES5新增的选择器（万能但有兼容）：</span><br><span class="line">		document.querySelector()：根据css选择器，返回一个元素</span><br><span class="line">		document.querySelectorAll()：根据css选择器，返回一个元素的集合</span><br><span class="line">		注：以上除了document.getElementById()和document.getElementsByTagName()其余都有兼容性，IE6不支持</span><br><span class="line">	节点选择器：</span><br><span class="line">		oDiv.children：返回一个元素下面所有元素节点组成的数组</span><br><span class="line">		oSpan.parentNode：返回一个元素的父节点</span><br></pre></td></tr></table></figure>
+<p>首先导入mysql-connector-java-5.1.17.jar到\WEB-INF\lib下</p>
+<p>我的方法是把该jar包复制到该目录下，右键-&gt;Build Path </p>
+<p>写一个index.jsp文件，内容如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=<span class="string">"java"</span> <span class="keyword">import</span>=<span class="string">"java.sql.*"</span> contentType=<span class="string">"text/html; charset=UTF-8"</span>pageEncoding=<span class="string">"UTF-8"</span>%&gt;</span><br><span class="line">    &lt;!-- 连接数据库必须将“java.sql”导入 --&gt;</span><br><span class="line">&lt;!DOCTYPE html PUBLIC <span class="string">"-//W3C//DTD HTML 4.01 Transitional//EN"</span> <span class="string">"http://www.w3.org/TR/html4/loose.dtd"</span>&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Content-Type"</span> content=<span class="string">"text/html; charset=UTF-8"</span>&gt;</span><br><span class="line">&lt;title&gt;图书馆管理系统&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;center&gt;</span><br><span class="line">        &lt;a href=add,jsp&gt;添加图书信息&lt;/a&gt;</span><br><span class="line">         </span><br><span class="line">        &lt;table align=<span class="string">"center"</span> width=<span class="string">"50%"</span> border=<span class="string">"1"</span>&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">                &lt;th&gt;书名&lt;/th&gt;</span><br><span class="line">                &lt;th&gt;作者&lt;/th&gt;</span><br><span class="line">                &lt;th&gt;价格&lt;/th&gt;</span><br><span class="line">                &lt;th&gt;管理&lt;/th&gt;</span><br><span class="line">            &lt;/tr&gt;</span><br><span class="line">             </span><br><span class="line">            &lt;!-- 注意：&lt;%  %&gt;中的是脚本语言 --&gt;</span><br><span class="line">            &lt;%</span><br><span class="line">            Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">            <span class="comment">//加载驱动</span></span><br><span class="line">            Connection con=DriverManager.getConnection(<span class="string">"jdbc:mysql://localhost:3306/book"</span>,<span class="string">"root"</span>,<span class="string">"1234"</span>);</span><br><span class="line">            <span class="comment">//上面两句是与数据库建立连接</span></span><br><span class="line">            Statement stmt=con.createStatement();</span><br><span class="line">            <span class="comment">//stmt拥有执行sql语句的方法</span></span><br><span class="line">            String s=<span class="string">"select * from bookinfo"</span>;</span><br><span class="line">            ResultSet rs=stmt.executeQuery(s);</span><br><span class="line">            <span class="comment">//执行s语句，得到的rs指向所查数据的开头</span></span><br><span class="line">            <span class="comment">//下述语句是将查到的数据展示到页面,用到html内容要用“”</span></span><br><span class="line">            <span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">                <span class="keyword">int</span> id=rs.getInt(<span class="number">1</span>);</span><br><span class="line">                <span class="comment">//数据库中存的id不需要展示,但在其修改和删除的链接中要用</span></span><br><span class="line">                out.println(</span><br><span class="line">                        <span class="string">"&lt;tr&gt;&lt;td&gt;"</span>+rs.getString(<span class="number">2</span>)+</span><br><span class="line">                        <span class="string">"&lt;/td&gt;&lt;td&gt;"</span>+rs.getString(<span class="number">3</span>)+</span><br><span class="line">                        <span class="string">"&lt;/td&gt;&lt;td&gt;"</span>+rs.getString(<span class="number">4</span>)+</span><br><span class="line">                        <span class="string">"&lt;/td&gt;&lt;td&gt;&lt;a href='edit.jsp?id="</span>+id+<span class="string">"'&gt;修改&lt;/a&gt; &lt;a href='del.jsp?id="</span>+id+<span class="string">"'&gt;删除&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//由内向外一层层关闭</span></span><br><span class="line">            rs.close();</span><br><span class="line">            stmt.close();</span><br><span class="line">            con.close();</span><br><span class="line">            %&gt;</span><br><span class="line">        &lt;/table&gt;</span><br><span class="line">    &lt;/center&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong>DOM属性的增删改查：（对象的操作方法和attribute）</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">内置属性：</span><br><span class="line">	可见：1.使用对象的操作方法，.语法、[]语法</span><br><span class="line">		  2.attribute系列</span><br><span class="line">			getAttribute：通过属性名获取属性</span><br><span class="line">			setAttribute：设置属性。第一个参数属性名，第二个参数是属性值</span><br><span class="line">			removeAttribute：通过属性名删除属性</span><br><span class="line">	不可见：如innerHTML、innerText、childNodes、tagName等等</span><br><span class="line">		使用对象的方法操作</span><br><span class="line">非内置属性：</span><br><span class="line">	可见：attribute系列</span><br><span class="line">			getAttribute：通过属性名获取属性值</span><br><span class="line">			setAttribute：设置属性。第一个参数属性名，第二个参数是属性值</span><br><span class="line">			removeAttribute：通过属性名删除属性</span><br><span class="line">	不可见：放飞自我的设置</span><br><span class="line">		使用对象的方法操作</span><br></pre></td></tr></table></figure>
-
-<p><strong>DOM样式的增删改查：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">内联式：1.style：元素名.style.元素名，既可以获取也可以设置</span><br><span class="line">				元素.style.cssText可以设置所有属性</span><br><span class="line">非内联式：内联和非内联都可以获取，但不可以设置</span><br><span class="line">	高级浏览器：getComputedStyle(元素名，false).属性</span><br><span class="line">	IE浏览器：元素.currentStyle.属性</span><br></pre></td></tr></table></figure>
-
-<p><strong>尺寸的获取：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">offsetWidth/offsetHeight：对象（元素）的content+padding+border。包括滚动条等边线，会随窗口的显示大小改变</span><br><span class="line">clientWidth/clientHeight：对象（元素）的content+padding。不包括滚动条等边线，会随窗口的显示大小改变 </span><br><span class="line">scrollWidth/scrollHeight：总尺寸，包含溢出的尺寸，content+padding+scroll。不包括边线宽度，会随着对象中内容的多少改变</span><br><span class="line">offsetLeft/offsetTop：相对于包含块偏移的距离</span><br><span class="line">scrollLeft/scrollTop：元素滚动条滚动了的距离，可设置</span><br></pre></td></tr></table></figure>
+<p>index.jsp-&gt;run as-&gt;run on server数据库的内容便通过jsp展示在前端</p>
+<img alt src="https://images2015.cnblogs.com/blog/1032351/201703/1032351-20170324130638346-14408655.png">
 
 	
 	</div>
@@ -403,12 +347,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/11/20/动态代理-JDK/" title="动态代理-JDK" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2019/11/10/Java中的异常处理/" title="Java中的异常处理" rel="next">
+			<a href="/2019/11/20/Java中的File类/" title="Java中的File类" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -426,30 +366,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2019/11/24/jsp-jdbc将mysql中的内容展现到前端/" title="jsp+jdbc将mysql中的内容展现到前端">
-								jsp+jdbc将mysql中的内容展现到前端			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 24日, 2019				
-							</p>
-							<p class="relate-post-content">
-								在mysql中见一个book数据库，见一张bookinfo的表，插入如下数据
-123456789101112mysql&gt; select * from bookinfo;+------+----------------------...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2019/11/24/jsp-jdbc将mysql中的内容展现到前端/" title="jsp+jdbc将mysql中的内容展现到前端">				
-								
-								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover1.jpg" alt="jsp+jdbc将mysql中的内容展现到前端"/>
-							</a>
-						</div>
-					</li>											
-			
 			
 					<li>
 						<div class="relate-post-text">
@@ -496,6 +412,54 @@ File类的常用方法
 							<a href="/2019/11/20/动态代理-JDK/" title="动态代理-JDK">				
 								
 								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover1.jpg" alt="动态代理-JDK"/>
+							</a>
+						</div>
+					</li>											
+			
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2019/11/10/DOM的总结/" title="DOM的总结">
+								DOM的总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 10日, 2019				
+							</p>
+							<p class="relate-post-content">
+								节点的介绍节点的分类
+
+
+节点
+节点类型(node Type)
+节点名字(node Name)
+节点值(node Value)
+
+
+
+元素节点
+1
+大写标签名
+null
+
+
+属性节点
+2
+属性名
+属性值
+
+
+文本节点
+3
+#text
+...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2019/11/10/DOM的总结/" title="DOM的总结">				
+								
+								<img class="lazy" src="/img/placeholder.jpg" data-src="/img/cart_cover1.jpg" alt="DOM的总结"/>
 							</a>
 						</div>
 					</li>											
